@@ -1,0 +1,31 @@
+# --- Terraform state (contains all resource data, IDs, and secrets in plaintext) ---
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# --- Local .terraform directory (provider plugins, modules) ---
+.terraform/
+.terraform.lock.hcl
+
+# --- Variable files with real values (never commit these) ---
+# Ignore all tfvars...
+*.tfvars
+*.tfvars.json
+# ...but DO allow the example templates
+!*.tfvars.example
+
+# --- Crash logs ---
+crash.log
+crash.*.log
+
+# --- CLI config / plan output files ---
+*.tfplan
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# --- SSH keys (in case any ever land in the repo folder) ---
+*.pem
+id_rsa
+id_rsa.pub
